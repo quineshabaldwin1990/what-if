@@ -1,10 +1,14 @@
 const prompt = require('prompt-sync')();
 
-const num1 = 15;
-console.log('num1 , num1');
+const groupSize = Number(prompt('Enter class size: '));
 
-const num2 = prompt('please input your class size');
-console.log(num2);
+if (groupSize % 3 === 0) {
+    console.log(groupSize / 3, 'groups of 3s');
+}
+else if (groupSize % 3 === 1) {
+    console.log((groupSize - 4) / 3 , 'groups of 3s', 2 , 'groups of 2s');
+}
 
-const num3 = prompt('please input your group size');
-console.log(num3);
+else {
+    console.log('error');
+}
